@@ -1,0 +1,264 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+.nav-bar{
+    background-color: rgb(61, 173, 108);
+    display: flex;
+}
+
+.nav-bar ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    margin: 10px;
+}
+.nav-bar ul li{
+    padding: 5px 10px;
+}
+
+.nav-bar ul li a{
+    text-decoration: none;
+    color:  rgb(66, 208, 233);
+}
+
+.nav-bar ul li a:hover {
+    background-color: rgb(66, 208, 233);
+    color: rgb(61, 173, 108);
+    border-radius: 5px;
+    padding: 10px 10px;
+}
+h1{
+    color: black;
+}
+.container{
+    padding: 10px 40px;
+    text-align: center;
+}
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    padding-top: 10px 10px;
+}
+
+.table, table th, table td{
+    border: 1px solid #bdbdbd;
+}
+thead{
+    background-color: steelblue;
+    border-bottom: 5px solid black;
+}
+.table thead tr th{
+    color:  rgb(66, 208, 233);
+}
+tr:nth-child(even){
+    background-color:  rgb(66, 208, 233);
+}
+tr:hover td{
+    background-color: rgb(68, 149, 216);
+    color:  rgb(66, 208, 233);
+}
+
+.botones{
+    align-items: left;
+    padding: 50px 5px;
+    width: 100%;
+    align-content: flex-end;
+}
+.botones a{
+    display: flex;
+    color: rgb(66, 208, 233);
+}
+.botones button{
+    outline: none;
+    border: none;
+}
+.botones button a{
+    text-decoration: none;
+    color:  rgb(66, 208, 233);
+}
+
+#Crear{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    height: 70%;
+    background-color:rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 5px;
+}
+#Crear h1{
+    font-size: 25px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+#contenido{
+    padding: 5px 10px;
+}
+
+#contenido input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+#contenido button{
+    margin: 10px;
+    width: 80px;
+    height: 35px;
+}
+
+#contenido button a{
+    color: rgb(66, 208, 233);
+    text-decoration: none;
+}
+
+#Editar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 20%;
+    height: 80%;
+    background-color:rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 5px;
+}
+
+#Editar h1{
+    font-size: 25px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+#contenido2{
+    padding: 5px 10px;
+}
+
+#contenido2 input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+
+#contenido2 button{
+    margin: 10px;
+    width: 80px;
+    height: 35px;
+}
+
+#contenido2 button a{
+    color:  rgb(66, 208, 233);
+    text-decoration: none;
+}
+
+#Eliminar{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 25%;
+    height: 40%;
+    background-color:rgba(0, 0, 0, 0.3);
+    text-align: center;
+    border-radius: 5px;
+    padding: 20px 20px;
+}
+
+#Eliminar h1{
+    font-size: 20px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+}
+
+#contenido3{
+    padding: 5px 10px;
+}
+
+#contenido3 input{
+    padding: 5px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+}
+#contenido3 button a{
+    color: rgb(66, 208, 233);
+    text-decoration: none;
+}
+
+#contenido3 button{
+    font-size: 15px;
+    margin: 10px;
+    width: 80px;
+    height: 35px;
+}
+
+.middle{
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transform: translate(-20%,10%);
+}
+
+.middle2{
+    position: absolute;
+    top: 90%;
+    left: 80%;
+    transform: translate(-80%,-90%);
+}
+.card{
+    cursor: pointer;
+    width: 240px;
+    height: 380px;
+}
+
+.front,.back{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position: absolute;
+    transition: transform .6s linear;
+}
+
+.front img{
+    height: 100%;
+    width: 100%;
+}
+.front{
+    transform: perspective(600px) rotateY(0deg);
+}
+.back{
+    background:  rgb(66, 208, 233);
+    transform: perspective(600px) rotateY(180deg);
+}
+
+.back-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #2c3e50;
+    text-align: center;
+    width: 100%;
+}
+
+.back span{
+    padding: 30px 10px;
+}
+
+.card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+}
